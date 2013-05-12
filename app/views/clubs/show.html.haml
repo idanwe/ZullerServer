@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @club.name
+%p
+  %b Logo:
+  = @club.logo
+%p
+  %b Min age:
+  = @club.min_age
+%p
+  %b Address:
+  = @club.address
+%p
+  %b Date:
+  = @club.date
+%p
+  %b Weight:
+  = @club.weight
+%p
+  %b Phone number:
+  = @club.phone_number
+%p
+  %b Music:
+  = @club.music
+
+
+= link_to 'Edit', edit_club_path(@club, format: :html), class: 'btn'
+= link_to 'Back', clubs_path(format: :html), class: 'btn'

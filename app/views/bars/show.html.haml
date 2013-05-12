@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @bar.name
+%p
+  %b Logo:
+  = @bar.logo
+%p
+  %b Min age:
+  = @bar.min_age
+%p
+  %b Address:
+  = @bar.address
+%p
+  %b Date:
+  = @bar.date
+%p
+  %b Weight:
+  = @bar.weight
+%p
+  %b Phone number:
+  = @bar.phone_number
+%p
+  %b Music:
+  = @bar.music
+
+= link_to 'Edit', edit_bar_path(@bar, format: :html), class: 'btn'
+= link_to 'Back', bars_path(format: :html), class: 'btn'
+

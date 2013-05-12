@@ -1,0 +1,8 @@
+.page-header
+  %h1 Editing club
+
+= render 'form'
+
+= link_to 'Show', clubs_path(@club, format: :html), class: 'btn'
+= link_to 'Back', clubs_path(format: :html), class: 'btn'
+

@@ -1,0 +1,14 @@
+= simple_form_for(@club, format: :html) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :logo
+    = f.number_field :min_age, min: 18, max: 100, value: 18
+    = f.input :address
+    = f.date_select :date
+    = f.input :phone_number
+    = f.input :music
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'

@@ -1,0 +1,36 @@
+.page-header
+  %h1 Listing bars
+
+%table.table.table-striped.table-bordered
+  %tr
+    %th Name
+    %th Logo
+    %th Min age
+    %th Address
+    %th Date
+    %th Weight
+    %th Phone number
+    %th Music
+    %th
+    %th
+    %th
+
+  - @bars.each do |bar|
+    %tr
+      %td= bar.name
+      %td= bar.logo
+      %td= bar.min_age
+      %td= bar.address
+      %td= bar.date
+      %td= bar.weight
+      %td= bar.phone_number
+      %td= bar.music
+      %td= link_to 'Show', bar_path(bar, format: :html), class: 'btn btn-mini'
+      %td= link_to 'Edit', edit_bar_path(bar, format: :html), class: 'btn btn-mini'
+      %td= link_to 'Destroy', bar_path(bar, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger'
+
+%br
+
+= link_to new_bar_path(format: :html), class: 'btn btn-success' do
+  %i.icon-plus.icon-white
+  new bar

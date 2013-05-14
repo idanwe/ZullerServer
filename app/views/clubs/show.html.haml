@@ -4,27 +4,32 @@
   %b Name:
   = @club.name
 %p
-  %b Logo:
-  = @club.logo
+  %b Address:
+  = @club.address
 %p
   %b Min age:
   = @club.min_age
 %p
-  %b Address:
-  = @club.address
-%p
-  %b Date:
-  = @club.date
-%p
-  %b Weight:
-  = @club.weight
+  %b Logo:
+  = @club.logo
 %p
   %b Phone number:
   = @club.phone_number
 %p
   %b Music:
   = @club.music
-
+%p
+  %b Opening Hours:
+  = @club.opening_hours
+%p
+  %b Menu:
+  = @club.menu
+ %p
+  %b Alcohol Prices:
+  = @club.alcohol_prices
+%p
+  %b Weight:
+  = @club.weight
 
 = link_to 'Edit', edit_club_path(@club, format: :html), class: 'btn'
 = link_to 'Back', clubs_path(format: :html), class: 'btn'

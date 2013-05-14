@@ -3,12 +3,13 @@
 
   .form-inputs
     = f.input :name
-    = f.input :logo
-    = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :address
-    = f.date_select :date
+    = f.number_field :min_age, min: 18, max: 100, value: 18
+    = f.input :logo
     = f.input :phone_number
     = f.input :music
+    = f.date_select :opening_hours
+    = f.input :menu
 
   .form-actions
     = f.button :submit, class: 'btn btn-primary'

@@ -1,0 +1,2 @@
+class Line < Event
+end

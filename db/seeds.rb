@@ -6,75 +6,96 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Attraction.all.delete
 
 Bar.create({
   name: "Grega",
   logo: "url/gregaLogo",
-  minAge: "20",
+  min_age: 20,
   address: "Herzelia, Harash 1",
-  date: Time.new(2013, 4, 14),
-  weight: "1",
-  phoneNumber: "034124141",
+  opening_hours: Time.new(2013, 4, 14),
+  phone_number: "034124141",
+  menu: "menu example 1",
+  alcohol_prices: {
+    beer: 25
+  },
   music: [
     "main_stream",
-    "rock",
-  ]
+    "rock"
+  ],
+  weight: 1
 })
 
 Bar.create({
   name: "Margoza",
   logo: "url/margozaLogo",
-  minAge: "20",
+  min_age: 20,
   address: "Tel Aviv, Oley Ziun 1",
-  date: Time.new(2013, 5, 21),
-  weight: "5",
-  phoneNumber: "034124141",
+  opening_hours: Time.new(2013, 5, 21),
+  phone_number: "034124141",
+  menu: "menu example 2",
+  alcohol_prices: {
+    beer: 25
+  },
   music: [
     "main stream",
-    "flok rock",
-  ]
+    "flok rock"
+  ],
+  weight: 5
 })
 
 Bar.create({
   name: "Friends",
   logo: "url/friendsLogo",
-  minAge: "18",
+  min_age: 18,
   address: "Tel Aviv, Dobnov 1",
-  date: Time.new(2013, 5, 22),
-  weight: "5",
-  phoneNumber: "034124141",
+  opening_hours: Time.new(2013, 5, 22),
+  phone_number: "034124141",
+  menu: "menu example 3",
+  alcohol_prices: {
+    beer: 25
+  },
   music: [
     "main stream",
-    "flok rock",
-  ]
+    "flok rock"
+  ],
+  weight: 5
 })
 
 Club.create({
   name: "Clara",
   logo: "url/claraLogo",
-  minAge: "22",
+  min_age: 22,
   address: "Tel Aviv, Kaufman 1",
-  date: Time.new(2013, 5, 19),
-  weight: "5",
-  phoneNumber: "0525252433",
+  opening_hours: Time.new(2013, 5, 19),
+  phone_number: "0525252433",
+  menu: "menu example 4",
+  alcohol_prices: {
+    beer: 25
+  },
   music: [
     "main stream",
     "pop",
     "house"
-  ]
+  ],
+  weight: 5
 })
 
 Club.create({
   name: "Dizingof",
   logo: "url/dizingofLogo",
-  minAge: "20",
+  min_age: 20,
   address: "Tel Aviv, Dizingof 1",
-  date: Time.new(2013, 5, 18),
-  weight: "5",
-  phoneNumber: "036543211",
+  opening_hours: Time.new(2013, 5, 18),
+  phone_number: "036543211",
+  menu: "menu example 5",
+  alcohol_prices: {
+    beer: 25
+  },
   music: [
     "main stream",
     "pop",
     "house"
-  ]
+  ],
+  weight: 5
 })

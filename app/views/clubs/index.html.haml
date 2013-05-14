@@ -4,13 +4,15 @@
 %table.table.table-striped.table-bordered
   %tr
     %th Name
-    %th Logo
-    %th Min age
     %th Address
-    %th Date
-    %th Weight
+    %th Min age
+    %th Logo
     %th Phone number
     %th Music
+    %th Opening Hours
+    %th Menu
+    %th Alcohol Prices
+    %th Weight
     %th
     %th
     %th
@@ -18,13 +20,15 @@
   - @clubs.each do |club|
     %tr
       %td= club.name
-      %td= club.logo
-      %td= club.min_age
       %td= club.address
-      %td= club.date
-      %td= club.weight
+      %td= club.min_age
+      %td= club.logo
       %td= club.phone_number
       %td= club.music
+      %td= club.opening_hours
+      %td= club.menu
+      %td= club.alcohol_prices
+      %td= club.weight
       %td= link_to 'Show', club_path(club, format: :html), class: 'btn btn-mini'
       %td= link_to 'Edit', edit_club_path(club, format: :html), class: 'btn btn-mini'
       %td= link_to 'Destroy', club_path(club, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger'

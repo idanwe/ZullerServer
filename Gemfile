@@ -24,6 +24,7 @@ group :development do
   gem 'haml-rails'
   # To use debugger
   gem 'debugger'
+  gem 'better_errors'
 end
 
 group :test do

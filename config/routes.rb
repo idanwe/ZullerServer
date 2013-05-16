@@ -6,9 +6,9 @@ ZS::Application.routes.draw do
   resources :clubs
   resources :bars
 
-  get "home/index"
-  get "home/search"
-  post "home/search"
+  get "api/index"
+  get "api/search"
+  post "api/search"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

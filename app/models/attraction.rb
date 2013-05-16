@@ -11,6 +11,7 @@ class Attraction
 
   # deals - embed array <Deal>
   # available_credits - embed array <Credit>
+  # owner - embed <User>
 
   # validates_presence_of :name, :min_age, :address, :date, :phone_number
 end

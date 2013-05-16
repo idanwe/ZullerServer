@@ -1,4 +1,6 @@
 class ClubsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /clubs
   # GET /clubs.json
   def index

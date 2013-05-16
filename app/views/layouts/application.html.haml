@@ -3,15 +3,32 @@
   %head
     %title
       Zuller
-    = stylesheet_link_tag "application", :media => "all"  
-    = javascript_include_tag "application"
+    = stylesheet_link_tag 'application', :media => 'all'  
+    = javascript_include_tag 'application'
     = csrf_meta_tags
 
   %body
     .navbar
       .navbar-inner
-        %a.brand Zuller
+        %a.brand{ href: '/' } Zuller
+        %form.navbar-search.pull-left
+          %input.search-query{ type: 'text', placeholder: 'Search' }
+        %ul.nav.pull-right
+          - if user_signed_in?
+            %li.disabled
+              %a #{current_user.email}
+            %li.action
+              = link_to 'Sign out', destroy_user_session_path, method: :delete
+          - else
+            %li.action
+              = link_to 'Register', new_user_registration_path
+            %li.action
+              = link_to 'Sign in', new_user_session_path 
     .container-fluid
+      - if notice
+        %p.alert.alert-success= notice
+      - if alert
+        %p.alert= alert
       .span2
         %ul.nav.nav-tabs.nav-stacked
           %li= link_to 'Bars', bars_path(format: :html)

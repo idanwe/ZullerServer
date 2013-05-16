@@ -2,7 +2,8 @@ class HomeController < ApplicationController
   def index
   end
 
-  def search
+  def search(params)
+    # user_token = params[:user_token]
     attractions = Attraction.all
 
     result = attractions.sample(5)

@@ -46,8 +46,8 @@ gem 'mongoid', '~> 3.1.x'
 gem 'bson_ext'
 gem 'mongo_ext'
 
-
-
+gem 'devise'
+gem 'cancan'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

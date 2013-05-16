@@ -1,4 +1,6 @@
 ZS::Application.routes.draw do
+  devise_for :users
+
   root to: 'home#index'
 
   resources :clubs
@@ -7,7 +9,6 @@ ZS::Application.routes.draw do
   get "home/index"
   get "home/search"
   post "home/search"
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -14,8 +14,6 @@
     %th Alcohol Prices
     %th Weight
     %th
-    %th
-    %th
 
   - @clubs.each do |club|
     %tr
@@ -29,9 +27,10 @@
       %td= club.menu
       %td= club.alcohol_prices
       %td= club.weight
-      %td= link_to 'Show', club_path(club, format: :html), class: 'btn btn-mini'
-      %td= link_to 'Edit', edit_club_path(club, format: :html), class: 'btn btn-mini'
-      %td= link_to 'Destroy', club_path(club, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger'
+      %td
+        = link_to 'Show', club_path(club, format: :html), class: 'btn btn-mini'
+        = link_to 'Edit', edit_club_path(club, format: :html), class: 'btn btn-mini'
+        = link_to 'Destroy', club_path(club, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger'
 
 %br
 

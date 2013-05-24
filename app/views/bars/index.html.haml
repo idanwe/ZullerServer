@@ -6,12 +6,14 @@
     %th Name
     %th Address
     %th Phone number
+    %th Contact phone
     %th Min age
     %th Logo
     %th Music
     %th Opening Hours
     %th Menu
     %th Alcohol Prices
+    %th Created At
     %th Weight
     %th
 
@@ -20,12 +22,14 @@
       %td= bar.name
       %td= bar.address
       %td= bar.phone_number
+      %td= bar.contact_phone
       %td= bar.min_age
       %td= bar.logo
       %td= bar.music
       %td= bar.opening_hours
       %td= bar.menu
       %td= bar.alcohol_prices
+      %td= bar.created_at
       %td= bar.weight
       %td.center
         = link_to 'Show', bar_path(bar, format: :html), class: 'btn btn-mini btn-in-table'

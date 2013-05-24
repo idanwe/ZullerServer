@@ -6,12 +6,14 @@
     %th Name
     %th Address
     %th Phone number
+    %th Contact number
     %th Min age
     %th Logo
     %th Music
     %th Opening Hours
     %th Menu
     %th Alcohol Prices
+    %th Created At
     %th Weight
     %th
 
@@ -20,12 +22,14 @@
       %td= club.name
       %td= club.address
       %td= club.phone_number
+      %td= club.contact_phone
       %td= club.min_age
       %td= club.logo
       %td= club.music
       %td= club.opening_hours
       %td= club.menu
       %td= club.alcohol_prices
+      %td= club.created_at
       %td= club.weight
       %td
         = link_to 'Show', club_path(club, format: :html), class: 'btn btn-mini btn-in-table'

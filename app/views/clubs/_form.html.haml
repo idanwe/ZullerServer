@@ -4,11 +4,12 @@
   .form-inputs
     = f.input :name
     = f.input :address
+    = f.input :phone_number
+    = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :logo
-    = f.input :phone_number
     = f.input :music
-    = f.date_select :opening_hours
+    = f.input :opening_hours, as: :date
     = f.input :menu
 
   .form-actions

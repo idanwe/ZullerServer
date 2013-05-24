@@ -10,7 +10,7 @@ class ApiController < ApplicationController
       randomAttraction << { "#{type}" => attraction }
     end
     zullerResult = {}
-    zullerResult['Attractions'] = randomAttraction
+    zullerResult['Attractions'] = randomAttraction #rabl
     respond_to do |format|
       format.json { render json: zullerResult }
     end

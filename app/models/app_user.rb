@@ -1,5 +1,7 @@
 class AppUser
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :deviseIdentifier, type: String
   field :fbToken, type: String
   field :fbName, type: String

@@ -25,7 +25,8 @@ group :development do
   # To use debugger
   gem 'debugger'
   gem 'better_errors'
-  # gem 'binding_of_caller'
+  gem 'binding_of_caller'
+  
 end
 
 group :test do
@@ -38,6 +39,8 @@ group :production do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'haml-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
@@ -48,6 +51,10 @@ gem 'mongo_ext'
 
 gem 'devise'
 gem 'cancan'
+
+
+gem 'gmaps4rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

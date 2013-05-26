@@ -1,4 +1,4 @@
-= simple_form_for(@bar, format: :html) do |f|
+= simple_form_for(@line, format: :html) do |f|
   = f.error_notification
 
   .form-inputs
@@ -10,8 +10,7 @@
     = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :logo
     = f.input :music
-    = f.input :opening_hours, as: :date
-    = f.input :menu
+    = f.input :duration, as: :date
 
   .form-actions
     = f.button :submit, class: 'btn btn-primary'

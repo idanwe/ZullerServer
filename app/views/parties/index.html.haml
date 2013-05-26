@@ -1,0 +1,41 @@
+.page-header
+  %h1 Party
+
+%table.table.table-striped.table-bordered
+  %tr
+    %th Name
+    %th Address
+    %th Phone number
+    %th Contact number
+    %th Place
+    %th Min age
+    %th Logo
+    %th Music
+    %th Duration
+    %th Created At
+    %th Weight
+    %th
+
+  - @parties.each do |party|
+    %tr
+      %td= party.name
+      %td= party.address
+      %td= party.phone_number
+      %td= party.contact_phone
+      %td= party.bar.name
+      %td= party.min_age
+      %td= party.logo
+      %td= party.music
+      %td= party.duration
+      %td= party.created_at
+      %td= party.weight
+      %td
+        = link_to 'Show', party_path(party, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Edit', edit_party_path(party, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Delete', party_path(party, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
+
+%br
+
+= link_to new_party_path(format: :html), class: 'btn btn-success' do
+  %i.icon-plus.icon-white
+  new party

@@ -3,8 +3,10 @@ ZS::Application.routes.draw do
 
   root to: 'home#index'
 
-  resources :clubs
   resources :bars
+  resources :parties
+  resources :clubs
+  resources :lines
 
   get "api/index"
   get "api/search"

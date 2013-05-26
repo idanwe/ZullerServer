@@ -1,0 +1,35 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @line.name
+%p
+  %b Address:
+  = @line.address
+%p
+  %b Phone number:
+  = @line.phone_number
+%p
+  %b Contact phone:
+  = @line.contact_phone
+%p
+  %b Min age:
+  = @line.min_age
+%p
+  %b Logo:
+  = @line.logo
+%p
+  %b Music:
+  = @line.music
+%p
+  %b Duration:
+  = @line.duration
+%p
+  %b Create At:
+  = @line.created_at
+%p
+  %b Weight:
+  = @line.weight
+
+= link_to 'Edit', edit_line_path(@line, format: :html), class: 'btn'
+= link_to 'Back', lines_path(format: :html), class: 'btn'

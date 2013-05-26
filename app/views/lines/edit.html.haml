@@ -1,0 +1,7 @@
+.page-header
+  %h1 Editing line
+
+= render 'form'
+
+= link_to 'Show', lines_path(@line, format: :html), class: 'btn'
+= link_to 'Back', lines_path(format: :html), class: 'btn'

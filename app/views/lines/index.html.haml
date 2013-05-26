@@ -1,0 +1,39 @@
+.page-header
+  %h1 Line
+
+%table.table.table-striped.table-bordered
+  %tr
+    %th Name
+    %th Address
+    %th Phone number
+    %th Contact number
+    %th Min age
+    %th Logo
+    %th Music
+    %th Duration
+    %th Created At
+    %th Weight
+    %th
+
+  - @lines.each do |line|
+    %tr
+      %td= line.name
+      %td= line.address
+      %td= line.phone_number
+      %td= line.contact_phone
+      %td= line.min_age
+      %td= line.logo
+      %td= line.music
+      %td= line.duration
+      %td= line.created_at
+      %td= line.weight
+      %td
+        = link_to 'Show', party_path(line, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Edit', edit_party_path(line, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Delete', party_path(line, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
+
+%br
+
+= link_to new_party_path(format: :html), class: 'btn btn-success' do
+  %i.icon-plus.icon-white
+  new line

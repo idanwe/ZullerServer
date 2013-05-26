@@ -1,0 +1,35 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @party.name
+%p
+  %b Address:
+  = @party.address
+%p
+  %b Phone number:
+  = @party.phone_number
+%p
+  %b Contact phone:
+  = @party.contact_phone
+%p
+  %b Min age:
+  = @party.min_age
+%p
+  %b Logo:
+  = @party.logo
+%p
+  %b Music:
+  = @party.music
+%p
+  %b Duration:
+  = @party.duration
+%p
+  %b Create At:
+  = @party.created_at
+%p
+  %b Weight:
+  = @party.weight
+
+= link_to 'Edit', edit_party_path(@party, format: :html), class: 'btn'
+= link_to 'Back', parties_path(format: :html), class: 'btn'

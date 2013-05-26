@@ -1,17 +1,20 @@
-= simple_form_for(@bar, format: :html) do |f|
+= simple_form_for(@party, format: :html) do |f|
   = f.error_notification
 
+  - Attraction.all[0]
+  - @plc = Bar.all
   .form-inputs
     = f.input :name
     = f.input :address, input_html: { id: "addresspicker" }
     = f.input :phone_number
+    = f.input :bar, collection: @plc
     = f.input :contact_phone
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :logo
     = f.input :music
-    = f.input :opening_hours, as: :date
-    = f.input :menu
-
+    = f.input :duration, as: :date
+    
   .form-actions
     = f.button :submit, class: 'btn btn-primary'
+

@@ -1,3 +1,3 @@
 class Party < Event
-  belongs_to :place # hosts - belong to <Place>
-end
+  belongs_to :host, class_name: 'Place', inverse_of: :parties# validate: ture
+end 

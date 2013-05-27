@@ -2,10 +2,10 @@
   = f.error_notification
 
   - Attraction.all[0]
-  - @places = Place.all
+  - @hosts = Place.all
   .form-inputs
     = f.input :name
-    = f.input :place, collection: @places
+    = f.input :host, collection: @hosts
     = f.input :address, input_html: { id: "addresspicker" }
     = f.input :phone_number
     = f.input :contact_phone

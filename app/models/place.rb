@@ -3,6 +3,6 @@ class Place < Attraction
   field :menu, type: String
   field :alcohol_prices, type: Hash
 
-  has_many :parties
-  has_many :lines
+  has_many :parties, class_name: 'Party', inverse_of: :host
+  has_many :lines, class_name: 'Line', inverse_of: :host
 end

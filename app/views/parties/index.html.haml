@@ -4,7 +4,7 @@
 %table.table.table-striped.table-bordered
   %tr
     %th Name
-    %th Place
+    %th Host
     %th Address
     %th Phone number
     %th Contact number
@@ -19,7 +19,7 @@
   - @parties.each do |party|
     %tr
       %td= party.name
-      %td= party.place.name
+      %td= party.host.name
       %td= party.address
       %td= party.phone_number
       %td= party.contact_phone

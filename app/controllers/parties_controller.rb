@@ -42,9 +42,9 @@ class PartiesController < ApplicationController
   # POST /parties.json
   def create
     Attraction.all[0]
-    @place = Place.find(params[:party][:place])
+    @host = Place.find(params[:party][:host])
     @party = Party.new(params[:party])
-    @place.parties << @party
+    @host.parties << @party
     
     respond_to do |format|
       if @party.save

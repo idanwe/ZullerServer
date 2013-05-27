@@ -1,3 +1,3 @@
 class Line < Event
-  belongs_to :place  
+  belongs_to :host, class_name: 'Place', inverse_of: :lines
 end

@@ -1,3 +1,3 @@
 class Party < Event
-  belongs_to :bar
+  belongs_to :place # hosts - belong to <Place>
 end

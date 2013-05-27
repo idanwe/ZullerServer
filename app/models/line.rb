@@ -1,3 +1,3 @@
 class Line < Event
-  belongs_to :bar
+  belongs_to :place  
 end

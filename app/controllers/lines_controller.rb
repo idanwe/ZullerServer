@@ -40,7 +40,10 @@ class LinesController < ApplicationController
   # POST /lines
   # POST /lines.json
   def create
+    Attraction.all[0]
+    @place = Place.find(params[:line][:place])
     @line = Line.new(params[:line])
+    @place.lines << @line
 
     respond_to do |format|
       if @line.save

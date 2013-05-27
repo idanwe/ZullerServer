@@ -1,13 +1,13 @@
 = simple_form_for(@party, format: :html) do |f|
   = f.error_notification
 
-  / # - Attraction.all[0]
-  - @plc = Bar.all
+  - Attraction.all[0]
+  - @places = Place.all
   .form-inputs
     = f.input :name
+    = f.input :place, collection: @places
     = f.input :address, input_html: { id: "addresspicker" }
     = f.input :phone_number
-    = f.input :bar, collection: @plc
     = f.input :contact_phone
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18

@@ -40,11 +40,10 @@ class PartiesController < ApplicationController
   # POST /parties
   # POST /parties.json
   def create
-    # Attraction.all[0]
-    @bar = Bar.find(params[:party][:bar])
-    # params[:party].delete(:bar)
+    Attraction.all[0]
+    @place = Place.find(params[:party][:place])
     @party = Party.new(params[:party])
-    @bar.parties << @party
+    @place.parties << @party
     
     respond_to do |format|
       if @party.save

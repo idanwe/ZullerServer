@@ -3,6 +3,6 @@ class Place < Attraction
   field :menu, type: String
   field :alcohol_prices, type: Hash
 
-  # has_many :events
-  # child_events - embed <Event>
+  # has_many :parties
+  # has_many :lines
 end

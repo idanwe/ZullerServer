@@ -1,7 +1,7 @@
 = simple_form_for(@party, format: :html) do |f|
   = f.error_notification
 
-  - Attraction.all[0]
+  / # - Attraction.all[0]
   - @plc = Bar.all
   .form-inputs
     = f.input :name

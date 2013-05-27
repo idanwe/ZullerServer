@@ -40,11 +40,12 @@ class PartiesController < ApplicationController
   # POST /parties
   # POST /parties.json
   def create
-    bar = Attraction.find(params[:party][:bar])
-    @party = bar.parties.new(params[:party])
-    # @party = Party.new(params[:party])
-
-
+    # Attraction.all[0]
+    @bar = Bar.find(params[:party][:bar])
+    # params[:party].delete(:bar)
+    @party = Party.new(params[:party])
+    @bar.parties << @party
+    
     respond_to do |format|
       if @party.save
         format.html { redirect_to @party, notice: 'Party was successfully created.' }

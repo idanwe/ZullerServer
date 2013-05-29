@@ -19,7 +19,8 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: 0,
+  # musics: [:pop, :dance, :israeli],
+  music: 1,
   weight: 1
 })
 
@@ -34,7 +35,8 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: 1,
+  # musics: [:alternative, :raggae, :traditional, :israeli_rock],
+  music: 2,
   weight: 5
 })
 
@@ -49,7 +51,8 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: 1,
+  # musics: [:rock ,:israeli_rock, :israeli, :hiphop, :pop],
+  music: 3,
   weight: 5
 })
 
@@ -64,7 +67,8 @@ Club.create({
   alcohol_prices: {
     beer: 25
   },
-  music: 0,
+  # musics: [:pop, :electronic, :dance],
+  music: 4,
   weight: 5
 })
 
@@ -79,6 +83,7 @@ Club.create({
   alcohol_prices: {
     beer: 25
   },
-  music: 2,
+  # musics: [:pop, :trance, :hiphop, :dance],
+  music: 5,
   weight: 5
 })

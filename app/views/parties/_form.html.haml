@@ -10,8 +10,9 @@
     = f.input :contact_phone
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
-    = f.input :music
     = f.input :logo_url, as: :filepicker, label: "Logo"
+    = f.label :music
+    = f.select :music, Attraction.musics_for_select, prompt: "Select your Music"
     = f.input :duration, as: :date
     
   .form-actions

@@ -33,7 +33,7 @@
       %td= club.weight
       %td
         = link_to 'Show', club_path(club, format: :html), class: 'btn btn-mini btn-in-table'
-        = link_to 'Edit', edit_club_path(club, format: :html), class: 'btn btn-mini btn-in-table'
+        / = link_to 'Edit', edit_club_path(club, format: :html), class: 'btn btn-mini btn-in-table'
         = link_to 'Delete', club_path(club, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
 
 %br

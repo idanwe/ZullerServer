@@ -33,7 +33,7 @@
       %td= bar.weight
       %td.center
         = link_to 'Show', bar_path(bar, format: :html), class: 'btn btn-mini btn-in-table'
-        = link_to 'Edit', edit_bar_path(bar, format: :html), class: 'btn btn-mini btn-in-table'
+        / = link_to 'Edit', edit_bar_path(bar, format: :html), class: 'btn btn-mini btn-in-table'
         = link_to 'Delete', bar_path(bar, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
 
 %br

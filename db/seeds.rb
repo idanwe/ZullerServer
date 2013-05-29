@@ -19,10 +19,7 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: [
-    "main_stream",
-    "rock"
-  ],
+  music: 0,
   weight: 1
 })
 
@@ -37,10 +34,7 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: [
-    "main stream",
-    "flok rock"
-  ],
+  music: 1,
   weight: 5
 })
 
@@ -55,10 +49,7 @@ Bar.create({
   alcohol_prices: {
     beer: 25
   },
-  music: [
-    "main stream",
-    "flok rock"
-  ],
+  music: 1,
   weight: 5
 })
 
@@ -73,11 +64,7 @@ Club.create({
   alcohol_prices: {
     beer: 25
   },
-  music: [
-    "main stream",
-    "pop",
-    "house"
-  ],
+  music: 0,
   weight: 5
 })
 
@@ -92,10 +79,6 @@ Club.create({
   alcohol_prices: {
     beer: 25
   },
-  music: [
-    "main stream",
-    "pop",
-    "house"
-  ],
+  music: 2,
   weight: 5
 })

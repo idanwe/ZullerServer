@@ -48,6 +48,7 @@ gem 'simple_form'
 gem 'mongoid', '~> 3.1.x'
 gem 'bson_ext'
 gem 'mongo_ext'
+gem 'simple_enum'
 
 gem 'devise'
 gem 'cancan'

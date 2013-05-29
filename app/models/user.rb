@@ -41,5 +41,5 @@ class User
   # field :authentication_token, :type => String
 
   field :admin, type: Boolean
-  # field :rols
+  # field :roles
 end

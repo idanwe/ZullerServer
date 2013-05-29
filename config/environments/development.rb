@@ -32,4 +32,6 @@ ZS::Application.configure do
   config.sass.preferred_syntax = :sass
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.filepicker_rails.api_key = ENV['FILEPICKER_API_KEY']
 end

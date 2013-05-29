@@ -10,7 +10,7 @@ Attraction.all.delete
 
 Bar.create({
   name: "Grega",
-  logo: "url/gregaLogo",
+  logo_url: "",
   min_age: 20,
   address: "Herzelia, Harash 1",
   opening_hours: Time.new(2013, 4, 14),
@@ -25,7 +25,7 @@ Bar.create({
 
 Bar.create({
   name: "Margoza",
-  logo: "url/margozaLogo",
+  logo_url: "",
   min_age: 20,
   address: "Tel Aviv, Oley Ziun 1",
   opening_hours: Time.new(2013, 5, 21),
@@ -40,7 +40,7 @@ Bar.create({
 
 Bar.create({
   name: "Friends",
-  logo: "url/friendsLogo",
+  logo_url: "",
   min_age: 18,
   address: "Tel Aviv, Dobnov 1",
   opening_hours: Time.new(2013, 5, 22),
@@ -55,7 +55,7 @@ Bar.create({
 
 Club.create({
   name: "Clara",
-  logo: "url/claraLogo",
+  logo_url: "",
   min_age: 22,
   address: "Tel Aviv, Kaufman 1",
   opening_hours: Time.new(2013, 5, 19),
@@ -70,7 +70,7 @@ Club.create({
 
 Club.create({
   name: "Dizingof",
-  logo: "url/dizingofLogo",
+  logo_url: "",
   min_age: 20,
   address: "Tel Aviv, Dizingof 1",
   opening_hours: Time.new(2013, 5, 18),

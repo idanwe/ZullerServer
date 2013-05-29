@@ -24,7 +24,8 @@ class Attraction
   field :phone_number, type: String
   field :contact_phone, type: String
   field :min_age, type: Integer
-  field :logo, type: String
+  field :logo_url, type: String
+  
   # field :music, type: Array
   as_enum :music, MUSICS
   

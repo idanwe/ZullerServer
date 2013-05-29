@@ -16,8 +16,10 @@
   %b Min age:
   = @club.min_age
 %p
-  %b Logo:
-  = @club.logo
+  %b Logo url:
+  - if @club.logo_url?
+    = filepicker_image_tag @club.logo_url, w: 160, h: 160, fit: 'clip'
+  = @club.logo_url
 %p
   %b Music:
   = @club.music

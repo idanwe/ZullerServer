@@ -18,6 +18,7 @@ class Attraction
   include Mongoid::Document
   include Mongoid::Timestamps
   include SimpleEnum::Mongoid
+  # include MusicEnums
   
   field :name, type: String
   field :phone_number, type: String
@@ -27,26 +28,8 @@ class Attraction
   # field :music, type: Array
   as_enum :music, MUSICS
   
-  # [
-  #  :pop, :electronic, :rock, :alternative,
-  #  :israeli, :israeli_rock, :traditional,
-  #  :dubstep, :trance, :dance, :raggae,
-  #  :metal, :hiphop
-  # ]
-
-# 0.pop
-# 1.electronic
-# 2.rock
-# 3.alternative
-# 4.israeli
-# 5.israeli Rock
-# 6.traditional
-# 7.dubstep
-# 8.trance
-# 9.dance
-# 10.raggae
-# 11.metal
-# 12.hiphop
+  # extend Enumerize
+  # enumerize :musics, in: [ :pop, :electronic, :rock, :alternative, :israeli, :israeli_rock, :traditional, :dubstep, :trance, :dance, :raggae, :metal, :hiphop ], multiple: true
 
   field :weight, type: Integer
 
@@ -56,3 +39,17 @@ class Attraction
 
   validates_presence_of :name
 end
+
+# module MusicEnums
+#   extend Enumerize
+
+#   enumerize :musics, in: MUSICS, multiple: true
+# end
+
+
+# [
+#  :pop, :electronic, :rock, :alternative,
+#  :israeli, :israeli_rock, :traditional,
+#  :dubstep, :trance, :dance, :raggae,
+#  :metal, :hiphop
+# ]

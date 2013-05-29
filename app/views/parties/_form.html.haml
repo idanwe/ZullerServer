@@ -5,7 +5,7 @@
   - @hosts = Place.all
   .form-inputs
     = f.input :name
-    = f.input :host, collection: @hosts
+    = f.input :host, collection: @hosts, prompt: "Select Host Place"
     = f.input :phone_number
     = f.input :contact_phone
     = f.label :min_age

@@ -22,7 +22,7 @@
   = @party.logo_url
 %p
   %b Music:
-  = @party.music
+  = @party.musics.join(', ')
 %p
   %b Duration:
   = @party.duration

@@ -22,7 +22,7 @@
   = @club.logo_url
 %p
   %b Music:
-  = @club.music
+  = @club.musics.join(', ')
 %p
   %b Opening Hours:
   = @club.opening_hours

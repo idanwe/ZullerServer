@@ -20,7 +20,7 @@ Bar.create({
     beer: 25
   },
   # musics: [:pop, :dance, :israeli],
-  music: 1,
+  musics: [2, 1],
   weight: 1
 })
 
@@ -36,7 +36,7 @@ Bar.create({
     beer: 25
   },
   # musics: [:alternative, :raggae, :traditional, :israeli_rock],
-  music: 2,
+  musics: [2, 2],
   weight: 5
 })
 
@@ -52,7 +52,7 @@ Bar.create({
     beer: 25
   },
   # musics: [:rock ,:israeli_rock, :israeli, :hiphop, :pop],
-  music: 3,
+  musics: [2, 3],
   weight: 5
 })
 
@@ -68,7 +68,7 @@ Club.create({
     beer: 25
   },
   # musics: [:pop, :electronic, :dance],
-  music: 4,
+  musics: [2, 4],
   weight: 5
 })
 
@@ -84,6 +84,6 @@ Club.create({
     beer: 25
   },
   # musics: [:pop, :trance, :hiphop, :dance],
-  music: 5,
+  musics: [2, 5],
   weight: 5
 })

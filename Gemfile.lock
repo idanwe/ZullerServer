@@ -43,6 +43,10 @@ GEM
       bson (~> 1.8.6)
     builder (3.0.4)
     cancan (1.6.10)
+    chosen-rails (0.9.14)
+      coffee-rails (>= 3.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -192,6 +196,7 @@ DEPENDENCIES
   bootstrap-sass
   bson_ext
   cancan
+  chosen-rails
   coffee-rails (~> 3.2.1)
   debugger
   devise

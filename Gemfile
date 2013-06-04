@@ -34,16 +34,8 @@ group :test do
 end
 
 group :production do
-  
   gem 'thin'
 end
-
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-
-gem 'haml-bootstrap-rails'
-gem 'bootstrap-sass'
-gem 'simple_form'
 
 gem 'mongoid', '~> 3.1.x'
 gem 'bson_ext'
@@ -54,9 +46,17 @@ gem 'simple_enum'
 gem 'devise'
 gem 'cancan'
 
+gem 'haml-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'simple_form'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'chosen-rails'
 
 gem 'gmaps4rails'
 gem 'filepicker-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

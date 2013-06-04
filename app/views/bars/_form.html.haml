@@ -9,11 +9,7 @@
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :logo_url, as: :filepicker, label: "Logo"
-    = f.label :music
-    = f.select :music, Attraction.musics_for_select, prompt: "Select your Music"
-    / = f.input :musics, collection: Attraction.musics.options
-    / = f.input :musics, as: :select
-
+    = f.input :musics, as: :select, input_html: { class: 'music-multiselect' }
     = f.input :opening_hours, as: :date
     = f.input :menu
 

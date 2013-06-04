@@ -10,7 +10,7 @@
     %th Contact number
     %th Min age
     %th Logo url
-    %th Music
+    %th Musics
     %th Duration
     %th Created At
     %th Weight
@@ -26,7 +26,7 @@
       %td= party.contact_phone
       %td= party.min_age
       %td= party.logo_url
-      %td= party.music
+      %td= party.musics.join(', ')
       %td= party.duration
       %td= party.created_at
       %td= party.weight

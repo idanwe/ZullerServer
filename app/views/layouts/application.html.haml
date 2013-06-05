@@ -11,9 +11,10 @@
   %body
     .navbar
       .navbar-inner
-        %a.brand{ href: '/' } Zuller
-        %form.navbar-search.pull-left
-          %input.search-query{ type: 'text', placeholder: 'Search' }
+        .pull-left
+          %a.brand{ href: '/' } Zuller
+          %form.navbar-search
+            %input.search-query{ type: 'text', placeholder: 'Search' }
         %ul.nav.pull-right
           - if user_signed_in?
             %li.disabled

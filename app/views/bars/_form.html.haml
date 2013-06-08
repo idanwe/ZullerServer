@@ -8,10 +8,10 @@
     = f.input :contact_phone
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
-    = f.input :logo_url, as: :filepicker, label: "Logo"
-    = f.input :musics, as: :select, input_html: { class: 'music-multiselect' }
+    = f.input :logo_url, as: :filepicker, label: "Logo", wrapper_html: { class: "image-picker" }
+    = f.input :musics, as: :select, input_html: { class: "music-multiselect" }
     = f.input :opening_hours, as: :date
     = f.input :menu
 
   .form-actions
-    = f.button :submit, class: 'btn btn-primary'
+    = f.button :submit, class: "btn btn-primary"

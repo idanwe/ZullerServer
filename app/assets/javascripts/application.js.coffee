@@ -21,3 +21,13 @@ $('document').ready ->
   $('.music-multiselect').chosen()
   $('.host-select').chosen
     allow_single_deselect: true
+
+window.onImageUpload = ->
+  imgUrl = event.fpfile.url
+  convert = "/convert?fit=clip&h=160&w=160"
+  url = imgUrl + convert
+  img = $("<img>").prop('src', url)
+  $(".image-picker")
+    .append(img)
+    .find('.controls')
+    .hide()

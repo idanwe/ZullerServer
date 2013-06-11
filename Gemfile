@@ -49,6 +49,7 @@ gem 'cancan'
 gem 'haml-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'rabl-rails'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

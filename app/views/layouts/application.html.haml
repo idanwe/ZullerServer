@@ -3,7 +3,7 @@
   %head
     %title
       Zuller
-    = stylesheet_link_tag 'application', :media => 'all'  
+    = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
     = filepicker_js_include_tag
     = csrf_meta_tags
@@ -25,7 +25,7 @@
             // %li.action
             //   = link_to 'Register', new_user_registration_path
             %li.action
-              = link_to 'Sign in', new_user_session_path 
+              = link_to 'Sign in', new_user_session_path
     .container-fluid
       - if notice
         %p.alert.alert-success= notice
@@ -37,7 +37,8 @@
           %li= link_to 'Clubs', clubs_path(format: :html)
           %li= link_to 'Parties', parties_path(format: :html)
           %li= link_to 'Lines', lines_path(format: :html)
-
+          - if user_signed_in?
+            %li= link_to 'App Users', app_users_path(format: :html)
 
       .span10
         = yield

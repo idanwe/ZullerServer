@@ -1,4 +1,5 @@
 ZS::Application.routes.draw do
+
   devise_for :users
 
   root to: 'home#index'
@@ -7,6 +8,7 @@ ZS::Application.routes.draw do
   resources :parties
   resources :clubs
   resources :lines
+  resources :app_users
 
   get "api/index"
   get "api/search"

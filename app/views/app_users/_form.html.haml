@@ -1,0 +1,15 @@
+= simple_form_for(@app_user, format: :html) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :fb_name
+    = f.input :fb_token
+    = f.input :devise_identifier
+    = f.label :age
+    = f.number_field :age, min: 18, max: 100, value: 18
+    = f.input :musical_preferences, as: :select, input_html: { class: "music-multiselect" }
+
+  .form-actions
+    = f.button :submit, class: "btn btn-primary"
+
+

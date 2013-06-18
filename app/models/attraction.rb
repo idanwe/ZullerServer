@@ -10,6 +10,7 @@ class Attraction
   field :contact_phone, type: String
   field :min_age, type: Integer
   field :logo_url, type: String
+  field :photos_url, type: Array
 
   field :musics, type: Array
   enumerize :musics, in: Music.for_select, multiple: true

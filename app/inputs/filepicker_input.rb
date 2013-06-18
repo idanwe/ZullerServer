@@ -5,6 +5,7 @@ class FilepickerInput < SimpleForm::Inputs::Base
       button_class: 'btn',
       services: services,
       onchange: 'onImageUpload()',
+      mimetypes:'image/*',
       dragdrop: true
     }
     @builder.filepicker_field(attribute_name, options).html_safe

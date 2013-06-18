@@ -10,12 +10,13 @@
     %th Contact number
     %th Min age
     %th Logo url
+    %th Photos url
     %th Musics
     %th Duration
     %th Created At
     %th Weight
     %th
-  
+
   - Attraction.all[0]
   - @lines.each do |line|
     %tr
@@ -26,6 +27,7 @@
       %td= line.contact_phone
       %td= line.min_age
       %td= line.logo_url
+      %td= line.photos_url
       %td= line.musics.join(', ')
       %td= line.duration
       %td= line.created_at

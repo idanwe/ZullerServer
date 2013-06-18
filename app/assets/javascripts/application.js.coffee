@@ -17,17 +17,26 @@
 #= require chosen-jquery
 #= require_tree .
 
-$('document').ready ->
-  $('.music-multiselect').chosen()
-  $('.host-select').chosen
+$("document").ready ->
+  $(".music-multiselect").chosen()
+  $(".host-select").chosen
     allow_single_deselect: true
 
-window.onImageUpload = ->
-  imgUrl = event.fpfile.url
+@deleteImg = (img) ->
+  img.remove()
+  src = img.prop("src")
   convert = "/convert?fit=clip&h=160&w=160"
-  url = imgUrl + convert
-  img = $("<img>").prop('src', url)
-  $(".image-picker")
-    .append(img)
-    .find('.controls')
-    .hide()
+  url = src.replace(convert, "")
+  filepicker.remove url
+
+window.onImageUpload = ->
+  file = event.fpfile
+  img = $(event.target).siblings("img")
+  if file?
+    @deleteImg(img) unless img.length == 0
+    convert = "/convert?fit=clip&h=160&w=160"
+    url = file.url + convert
+    img = $("<img>").prop("src", url)
+    $(event.target).parent().append(img)
+  else
+    @deleteImg(img) unless img.length == 0

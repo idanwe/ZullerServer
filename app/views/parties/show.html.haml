@@ -16,10 +16,15 @@
   %b Min age:
   = @party.min_age
 %p
-  %b Logo url:
+  %b Logo:
   - if @party.logo_url?
     = filepicker_image_tag @party.logo_url, w: 160, h: 160, fit: 'clip'
   = @party.logo_url
+%p
+  %b Photos:
+  - if @party.photos_url?
+    = filepicker_image_tag @party.photos_url, w: 160, h: 160, fit: 'clip'
+  = @party.photos_url
 %p
   %b Music:
   = @party.musics.join(', ')

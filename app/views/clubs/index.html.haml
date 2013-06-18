@@ -5,6 +5,8 @@
   %tr
     %th Name
     %th Address
+    %th Latitude
+    %th Longitude
     %th Phone number
     %th Contact number
     %th Min age
@@ -12,8 +14,8 @@
     %th Photos url
     %th Musics
     %th Opening Hours
-    %th Menu
-    %th Alcohol Prices
+    / %th Menu
+    / %th Alcohol Prices
     %th Created At
     %th Weight
     %th
@@ -22,6 +24,8 @@
     %tr
       %td= club.name
       %td= club.address
+      %td= club.lat
+      %td= club.lng
       %td= club.phone_number
       %td= club.contact_phone
       %td= club.min_age
@@ -29,8 +33,8 @@
       %td= club.photos_url
       %td= club.musics.join(', ')
       %td= club.opening_hours
-      %td= club.menu
-      %td= club.alcohol_prices
+      / %td= club.menu
+      / %td= club.alcohol_prices
       %td= club.created_at
       %td= club.weight
       %td

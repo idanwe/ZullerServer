@@ -12,7 +12,7 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require jquery-ui
+#= require jquery.ui.all
 # require jquery.ui.addresspicker
 #= require chosen-jquery
 #= require_tree .

@@ -5,7 +5,10 @@
   - @hosts = Place.all
   .form-inputs
     = f.input :name
-    = f.input :host, collection: @hosts, input_html: { class: "host-select" }
+    - if @line.host.present?
+      = f.input :host, collection: @hosts, input_html: { class: "host-select" }, selected: @line.host
+    - else
+      = f.input :host, collection: @hosts, input_html: { class: "host-select" }
     = f.input :phone_number
     = f.input :contact_phone
     = f.label :min_age

@@ -34,7 +34,7 @@
       %td= line.weight
       %td
         = link_to 'Show', line_path(line, format: :html), class: 'btn btn-mini btn-in-table'
-        / = link_to 'Edit', edit_line_path(line, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Edit', edit_line_path(line, format: :html), class: 'btn btn-mini btn-in-table'
         = link_to 'Delete', line_path(line, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
 
 %br

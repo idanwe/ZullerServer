@@ -27,6 +27,9 @@ class PartiesController < ApplicationController
   def new
     @party = Party.new
 
+    Attraction.all[0]
+    @hosts = Place.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @party }
@@ -36,6 +39,9 @@ class PartiesController < ApplicationController
   # GET /parties/1/edit
   def edit
     @party = Party.find(params[:id])
+
+    Attraction.all[0]
+    @hosts = Place.all
   end
 
   # POST /parties
@@ -47,7 +53,7 @@ class PartiesController < ApplicationController
       @host = Place.find(params[:party][:host])
       @host.parties << @party
     end
-    
+
     respond_to do |format|
       if @party.save
         format.html { redirect_to @party, notice: 'Party was successfully created.' }
@@ -63,6 +69,8 @@ class PartiesController < ApplicationController
   # PUT /parties/1.json
   def update
     @party = Party.find(params[:id])
+    host = Place.find(params[:party][:host])
+    params[:party][:host] = host
 
     respond_to do |format|
       if @party.update_attributes(params[:party])

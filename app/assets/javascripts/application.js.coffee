@@ -21,12 +21,18 @@ $("document").ready ->
   $(".music-multiselect").chosen()
   $(".host-select").chosen
     allow_single_deselect: true
-  # editFilePicker()
 
 # editFilePicker = ->
 #   console.log 'editFilerPicker'
-#   $(".image-picker-input").each (input) ->
-#     input.val()
+#   $(".image-picker").each (i, imagePicker) ->
+#     debugger
+#     input = $(imagePicker).find(".controls").find("input")
+#     fileUrl = input.val()
+#     apiKey = input.attr "data-fp-apikey"
+#     convert = "/convert?fit=clip&h=160&w=160"
+#     url = file.url + convert
+#     input = $(imagePicker).find(".controls").find("input")
+
 
 window.onImageUpload = ->
   file = event.fpfile

@@ -1,12 +1,10 @@
 = simple_form_for(@line, format: :html) do |f|
   = f.error_notification
 
-  - Attraction.all[0]
-  - @hosts = Place.all
   .form-inputs
     = f.input :name
     - if @line.host.present?
-      = f.input :host, collection: @hosts, input_html: { class: "host-select" }, selected: @line.host
+      = f.input :host, collection: @hosts, input_html: { class: "host-select" }, selected: @line.host.id
     - else
       = f.input :host, collection: @hosts, input_html: { class: "host-select" }
     = f.input :phone_number

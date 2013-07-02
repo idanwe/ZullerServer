@@ -27,6 +27,9 @@ class LinesController < ApplicationController
   def new
     @line = Line.new
 
+    Attraction.all[0]
+    @hosts = Place.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @line }
@@ -36,6 +39,9 @@ class LinesController < ApplicationController
   # GET /lines/1/edit
   def edit
     @line = Line.find(params[:id])
+
+    Attraction.all[0]
+    @hosts = Place.all
   end
 
   # POST /lines
@@ -63,6 +69,8 @@ class LinesController < ApplicationController
   # PUT /lines/1.json
   def update
     @line = Line.find(params[:id])
+    host = Place.find(params[:line][:host])
+    params[:line][:host] = host
 
     respond_to do |format|
       if @line.update_attributes(params[:line])

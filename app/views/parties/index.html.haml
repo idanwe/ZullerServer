@@ -34,7 +34,7 @@
       %td= party.weight
       %td
         = link_to 'Show', party_path(party, format: :html), class: 'btn btn-mini btn-in-table'
-        / = link_to 'Edit', edit_party_path(party, format: :html), class: 'btn btn-mini btn-in-table'
+        = link_to 'Edit', edit_party_path(party, format: :html), class: 'btn btn-mini btn-in-table'
         = link_to 'Delete', party_path(party, format: :html), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger btn-in-table'
 
 %br

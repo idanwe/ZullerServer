@@ -16,40 +16,40 @@
 # require jquery.ui.addresspicker
 #= require chosen-jquery
 #= require_tree .
+composeUrl = (imgUrl) ->
+  convert = "/convert?fit=clip&h=160&w=160"
+  "#{imgUrl}#{convert}"
 
 $("document").ready ->
   $(".music-multiselect").chosen()
   $(".host-select").chosen
     allow_single_deselect: true
+  editFilePicker()
 
-# editFilePicker = ->
-#   console.log 'editFilerPicker'
-#   $(".image-picker").each (i, imagePicker) ->
-#     debugger
-#     input = $(imagePicker).find(".controls").find("input")
-#     fileUrl = input.val()
-#     apiKey = input.attr "data-fp-apikey"
-#     convert = "/convert?fit=clip&h=160&w=160"
-#     url = file.url + convert
-#     input = $(imagePicker).find(".controls").find("input")
+editFilePicker = ->
+  $(".image-picker").each (i, controlGroup) ->
+    controls = $(controlGroup).find(".controls")
+    input = controls.find("input")
 
+    imgUrl = input.val()
+    unless imgUrl is ""
+      url = composeUrl imgUrl
+      img = $("<img>").prop("src", url)
+      controls.append(img)
 
 window.onImageUpload = ->
   file = event.fpfile
   img = $(event.target).siblings("img")
+  deleteImg(img) unless img.length == 0
   if file?
-    deleteImg(img) unless img.length == 0
-    convert = "/convert?fit=clip&h=160&w=160"
-    url = file.url + convert
+    url = composeUrl file.url
     img = $("<img>").prop("src", url)
     $(event.target).parent().append(img)
-  else
-    deleteImg(img) unless img.length == 0
 
 deleteImg = (img) ->
   console.log 'deleteImge'
   img.remove()
-  src = img.prop("src")
+  imgUrl = img.prop("src")
   convert = "/convert?fit=clip&h=160&w=160"
-  url = src.replace(convert, "")
+  url = imgUrl.replace(convert, "")
   filepicker.remove url

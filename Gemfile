@@ -26,7 +26,7 @@ group :development do
   gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
-  
+
 end
 
 group :test do
@@ -49,7 +49,9 @@ gem 'cancan'
 gem 'haml-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem 'rabl-rails'
+
+gem 'rabl'
+gem 'oj'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

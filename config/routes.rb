@@ -10,9 +10,15 @@ ZS::Application.routes.draw do
   resources :lines
   resources :app_users
 
-  get "api/index"
-  get "api/search"
-  post "api/search"
+  namespace :api do
+    get "search"
+    get "zuller_my_night"
+    get "parties"
+  end
+
+  # get "api/search"
+  # get "api/zuller_my_night"
+  # get "api/parties"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

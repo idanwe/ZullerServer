@@ -61,6 +61,6 @@ ZS::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'zullerserver.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'zuller.herokuapp.com' }
 
 end

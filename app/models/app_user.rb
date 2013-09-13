@@ -5,11 +5,15 @@ class AppUser
   include Mongoid::Timestamps
   extend Enumerize
 
-  field :devise_identifier, type: String
-  field :fb_token, type: String
-  field :fb_name, type: String
-  field :age, type: Integer
+  field :device_id, type: String
 
+  field :fb_name, type: String
+  field :fb_token, type: String
+  field :fb_user_id, type: String
+
+  field :age, type: Integer
+  field :area_preferences, type: Array
+  field :drinking_preferences, type: Array
   field :musical_preferences, type: Array
   enumerize :musical_preferences, in: Music.for_select, multiple: true
 

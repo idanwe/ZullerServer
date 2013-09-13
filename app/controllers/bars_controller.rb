@@ -43,6 +43,10 @@ class BarsController < ApplicationController
   # POST /bars
   # POST /bars.json
   def create
+    if params[:bar][:logo_url].empty?
+      params[:bar][:logo_url] = "https://www.filepicker.io/api/file/aizy6UvfSeeHcksvU9cY"
+    end
+
     @bar = Bar.new(params[:bar])
 
     respond_to do |format|

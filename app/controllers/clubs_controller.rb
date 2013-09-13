@@ -42,6 +42,9 @@ class ClubsController < ApplicationController
   # POST /clubs
   # POST /clubs.json
   def create
+    if params[:club][:logo_url].empty?
+      params[:club][:logo_url] = "https://www.filepicker.io/api/file/rO3kJ3UStOwesJ7W4fJg"
+    end
     @club = Club.new(params[:club])
 
     respond_to do |format|

@@ -1,17 +1,26 @@
 %p#notice= notice
 
 %p
+  %b Device Id:
+  = @app_user.device_id
+%p
   %b fb Name:
   = @app_user.fb_name
 %p
   %b fb Token:
   = @app_user.fb_token
 %p
-  %b Devise Identifier:
-  = @app_user.devise_identifier
+  %b fb User Id:
+  = @app_user.fb_user_id
 %p
   %b Age:
   = @app_user.age
+%p
+  %b Area Preferences:
+  = @app_user.area_preferences #.join(', ')
+%p
+  %b Drinking Preferences:
+  = @app_user.drinking_preferences #.join(', ')
 %p
   %b Musical Preferences:
   = @app_user.musical_preferences.join(', ')
@@ -19,9 +28,11 @@
   %b Past Attractions:
   = @app_user.past_attractions
 %p
-  %b Create At:
+  %b Created At:
   = @app_user.created_at
+%p
+  %b Updated At:
+  = @app_user.updated_at
 
-= link_to 'Edit', edit_app_user_path(@app_user, format: :html), class: 'btn'
 = link_to 'Back', app_users_path(format: :html), class: 'btn'
 

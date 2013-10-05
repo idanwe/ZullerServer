@@ -8,9 +8,9 @@
     %th fb Token:
     %th fb User Id:
     %th Age:
-    %th Area Preferences:
-    %th Drinking Preferences:
-    %th Musical Preferences:
+    %th Area:
+    %th Favorite Beverage:
+    %th Favorite Music:
     %th Past Attractions:
     %th Created At:
     %th Updated At:
@@ -23,9 +23,9 @@
       %td= app_user.fb_token
       %td= app_user.fb_user_id
       %td= app_user.age
-      %td= app_user.area_preferences
-      %td= app_user.drinking_preferences
-      %td= app_user.musical_preferences.join(', ')
+      %td= app_user.area
+      %td= app_user.favorite_beverage
+      %td= app_user.favorite_music.join(', ')
       %td= app_user.past_attractions
       %td= app_user.created_at
       %td= app_user.updated_at

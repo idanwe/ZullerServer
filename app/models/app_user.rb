@@ -12,10 +12,10 @@ class AppUser
   field :fb_user_id, type: String
 
   field :age, type: Integer
-  field :area_preferences, type: Array
-  field :drinking_preferences, type: Array
-  field :musical_preferences, type: Array
-  enumerize :musical_preferences, in: Music.for_select, multiple: true
+  field :area, type: Array
+  field :favorite_beverage, type: Array
+  field :favorite_music, type: Array
+  enumerize :favorite_music, in: Music.for_select, multiple: true
 
   field :past_attractions, type: Hash
 

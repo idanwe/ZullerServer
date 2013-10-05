@@ -16,14 +16,14 @@
   %b Age:
   = @app_user.age
 %p
-  %b Area Preferences:
-  = @app_user.area_preferences #.join(', ')
+  %b Area:
+  = @app_user.area #.join(', ')
 %p
-  %b Drinking Preferences:
-  = @app_user.drinking_preferences #.join(', ')
+  %b Favorite Beverage:
+  = @app_user.favorite_beverage #.join(', ')
 %p
-  %b Musical Preferences:
-  = @app_user.musical_preferences.join(', ')
+  %b Favorite Music:
+  = @app_user.favorite_music.join(', ')
 %p
   %b Past Attractions:
   = @app_user.past_attractions

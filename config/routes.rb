@@ -8,12 +8,12 @@ ZS::Application.routes.draw do
   resources :parties
   resources :clubs
   resources :lines
-  resources :app_users
+  resources :app_users, path: '/api/app_users'
 
   namespace :api do
-    get "search"
-    get "zuller_my_night"
-    get "parties"
+    get 'search'
+    get 'zuller_my_night'
+    get 'parties'
   end
 
   # get "api/search"

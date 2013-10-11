@@ -12,11 +12,7 @@ class ApiController < ApplicationController
     zuller_result = {}
     zuller_result['Attractions'] = random_attractions #rabl
     respond_to do |format|
-      if params[:callback]
-        format.js { render json: zuller_result, callback: params[:callback] }
-      else
-        format.json { render json: zuller_result }
-      end
+      format.json { render json: zuller_result }
     end
   end
 
@@ -34,22 +30,14 @@ class ApiController < ApplicationController
     }
 
     respond_to do |format|
-      if params[:callback]
-        format.js { render json: zuller_result, callback: params[:callback] }
-      else
-        format.json { render json: zuller_result }
-      end
+      format.json { render json: zuller_result }
     end
   end
 
   def parties
     parties = Party.all
     respond_to do |format|
-      if params[:callback]
-        format.js { render json: parties, callback: params[:callback] }
-      else
-        format.json { render json: parties }
-      end
+      format.json { render json: parties }
     end
   end
 end

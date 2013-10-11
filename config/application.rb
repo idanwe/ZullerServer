@@ -70,5 +70,27 @@ module ZS
     config.assets.initialize_on_precompile = false
 
     config.filepicker_rails.api_key = ENV['FILEPICKER_API_KEY']
+
+    config.middleware.use Rack::Cors do
+      # allow do
+      #   origins 'http://localhost:9000', 'http://127.0.0.1:9000',
+      #           /http:\/\/192\.168\.0\.\d{1,3}(:\d+)?/
+      #           # regular expressions can be used here
+
+      #   resource '/file/list_all/', :headers => 'x-domain-token'
+      #   resource '/api/*',
+      #       :methods => [:get, :post, :put, :delete, :options],
+      #       :headers => 'x-domain-token',
+      #       :expose  => ['Some-Custom-Response-Header'],
+      #       :max_age => 600
+      #       # headers to expose
+      # end
+
+      allow do
+        origins 'http://localhost:9000', 'http://127.0.0.1:9000'
+        resource '/api/*', :headers => :any, :methods => [:get, :post]
+      end
+    end
+
   end
 end

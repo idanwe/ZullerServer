@@ -7,7 +7,10 @@
     = f.input :lat, label: 'Latitude'
     = f.input :lng, label: 'Longitude'
     = f.input :phone_number
-    = f.input :contact_phone
+    = f.input :contact_name
+    = f.input :contact_phone_number
+    = f.input :facebook_url
+    = f.input :site_url
     = f.label :min_age
     = f.number_field :min_age, min: 18, max: 100, value: 18
     = f.input :logo_url, as: :filepicker, label: "Logo", wrapper_html: { class: "image-picker" }

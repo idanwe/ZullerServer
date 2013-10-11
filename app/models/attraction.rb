@@ -7,10 +7,12 @@ class Attraction
 
   field :name, type: String
   field :phone_number, type: String
-  field :contact_phone, type: String
+  field :contact_name, type: String
+  field :contact_phone_number, type: String
   field :min_age, type: Integer
   field :logo_url, type: String
   field :photos_url, type: Array
+  field :facebook_url, type: String
 
   field :musics, type: Array
   enumerize :musics, in: Music.for_select, multiple: true

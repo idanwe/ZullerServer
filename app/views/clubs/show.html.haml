@@ -41,14 +41,14 @@
     = filepicker_image_tag @club.photos_url, w: 160, h: 160, fit: 'clip'
   = @club.photos_url
 %p
+  %b Menu:
+  = @club.menu
+%p
   %b Music:
   = @club.musics.join(', ')
 %p
   %b Opening Hours:
   = @club.opening_hours
-/ %p
-/   %b Menu:
-/   = @club.menu
 / %p
 /   %b Alcohol Prices:
 /   = @club.alcohol_prices

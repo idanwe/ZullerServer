@@ -40,6 +40,7 @@ class AppUsersController < ApplicationController
   # POST /app_users
   # POST /app_users.json
   def create
+    params[:app_user].delete(:favorite_music) # TODO: work with string
     user_with_device_id = AppUser.where(device_id: params[:app_user][:device_id])
     if user_with_device_id.exists?
       @app_user = user_with_device_id.first
@@ -62,7 +63,9 @@ class AppUsersController < ApplicationController
     end
 
     respond_to do |format|
+      is_new_user = @app_user.new_record?
       if @app_user.save
+        @app_user["is_new"] = true
         format.html { redirect_to @app_user, notice: 'App user was successfully created.' }
         format.json { render json: @app_user, status: :created, location: @app_user }
       else

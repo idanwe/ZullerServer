@@ -48,6 +48,10 @@ class PartiesController < ApplicationController
   # POST /parties.json
   def create
     Attraction.all[0]
+    if params[:party][:logo_url].empty?
+      params[:party][:logo_url] = "https://www.filepicker.io/api/file/Oz1izQPSl2cGvt3NeHoA"
+    end
+
     @party = Party.new(params[:party])
     if params[:party][:host].present?
       @host = Place.find(params[:party][:host])

@@ -7,4 +7,9 @@ class Line < Event
     self.host.address
   end
 
+  def as_json(options={})
+    json = super options
+    json[:address] = self.host.address
+    json
+  end
 end

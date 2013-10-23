@@ -2,7 +2,6 @@ class Place < Attraction
   field :address, type: String
   field :lat, type: Float
   field :lng, type: Float
-  field :opening_hours, type: Time #DateRange
   field :menu, type: String
   field :alcohol_prices, type: Hash
   field :site_url, type: String

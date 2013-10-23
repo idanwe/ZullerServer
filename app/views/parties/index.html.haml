@@ -14,7 +14,10 @@
     %th Logo url
     %th Photos url
     %th Musics
-    %th Duration
+    %th Date
+    %th Opening Hours Start
+    %th Opening Hours End
+    %th Day of Week
     %th Created At
     %th Weight
     %th
@@ -33,7 +36,10 @@
       %td= party.logo_url
       %td= party.photos_url
       %td= party.musics.join(', ')
-      %td= party.duration
+      %td= party.date
+      %td= party.opening_hours_start
+      %td= party.opening_hours_end
+      %td= Date::DAYNAMES[party.day_of_week] if party.day_of_week.present?
       %td= party.created_at
       %td= party.weight
       %td

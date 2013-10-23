@@ -17,7 +17,8 @@
     %th Photos url
     %th Menu
     %th Musics
-    %th Opening Hours
+    %th Opening Hours Start
+    %th Opening Hours End
     / %th Alcohol Prices
     %th Created At
     %th Weight
@@ -39,7 +40,8 @@
       %td= club.photos_url
       %td= club.menu
       %td= club.musics.join(', ')
-      %td= club.opening_hours
+      %td= club.opening_hours_start
+      %td= club.opening_hours_end
       / %td= club.alcohol_prices
       %td= club.created_at
       %td= club.weight

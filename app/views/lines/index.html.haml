@@ -14,7 +14,10 @@
     %th Logo url
     %th Photos url
     %th Musics
-    %th Duration
+    %th Date
+    %th Opening Hours Start
+    %th Opening Hours End
+    %th Day Of Week
     %th Created At
     %th Weight
     %th
@@ -33,7 +36,10 @@
       %td= line.logo_url
       %td= line.photos_url
       %td= line.musics.join(', ')
-      %td= line.duration
+      %td= line.date
+      %td= line.opening_hours_start
+      %td= line.opening_hours_end
+      %td= Date::DAYNAMES[line.day_of_week] if line.day_of_week.present?
       %td= line.created_at
       %td= line.weight
       %td

@@ -48,6 +48,9 @@ class PartiesController < ApplicationController
   # POST /parties.json
   def create
     Attraction.all[0]
+
+    params[:line][:day_of_week] = Date::DAYNAMES.index(params[:line][:day_of_week])
+
     if params[:party][:logo_url].empty?
       params[:party][:logo_url] = "https://www.filepicker.io/api/file/Oz1izQPSl2cGvt3NeHoA"
     end

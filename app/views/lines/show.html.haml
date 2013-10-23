@@ -35,8 +35,17 @@
   %b Music:
   = @line.musics.join(', ')
 %p
-  %b Duration:
-  = @line.duration
+  %b Date:
+  = @line.date
+%p
+  %b Opening Hours Start:
+  = @line.opening_hours_start
+%p
+  %b Opening Hours End:
+  = @line.opening_hours_end
+%p
+  %b Day of Week:
+  = Date::DAYNAMES[@line.day_of_week] if @line.day_of_week.present?
 %p
   %b Create At:
   = @line.created_at

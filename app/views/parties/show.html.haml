@@ -35,8 +35,17 @@
   %b Music:
   = @party.musics.join(', ')
 %p
-  %b Duration:
-  = @party.duration
+  %b Date:
+  = @party.date
+%p
+  %b Opening Hours Start:
+  = @party.opening_hours_start
+%p
+  %b Opening Hours End:
+  = @party.opening_hours_end
+%p
+  %b Day of Week:
+  = Date::DAYNAMES[@party.day_of_week] if @party.day_of_week.present?
 %p
   %b Create At:
   = @party.created_at

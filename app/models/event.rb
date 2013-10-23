@@ -1,3 +1,4 @@
 class Event < Attraction
-  field :duration, type: Time #DateRange
+  field :date, type: Date
+  field :day_of_week, type: Integer
 end

@@ -48,6 +48,9 @@ class LinesController < ApplicationController
   # POST /lines.json
   def create
     Attraction.all[0]
+
+    params[:line][:day_of_week] = Date::DAYNAMES.index(params[:line][:day_of_week])
+
     @line = Line.new(params[:line])
     if params[:line][:host].present?
       @host = Place.find(params[:line][:host])

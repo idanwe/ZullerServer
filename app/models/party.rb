@@ -9,7 +9,7 @@ class Party < Event
 
   def as_json(options={})
     json = super options
-    json["address"] = self.host.address
+    json[:address] = self.host.address
     json
   end
 end

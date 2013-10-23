@@ -18,6 +18,9 @@ class Attraction
   field :musics, type: Array
   enumerize :musics, in: Music.for_select, multiple: true
 
+  field :opening_hours_start, type: Time #DateRange
+  field :opening_hours_end, type: Time #DateRange
+
   field :weight, type: Integer
 
   # deals - embed array <Deal>

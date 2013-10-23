@@ -1,22 +1,17 @@
 class ApiController < ApplicationController
   def search
-    # user_token = params[:user_token]
-    attractions = Attraction.all
 
-    result = attractions.sample(5)
-    random_attractions = []
-    result.each do |attraction|
-      type = attraction.class
-      random_attractions << { "#{type}" => attraction }
-    end
-    zuller_result = {}
-    zuller_result['Attractions'] = random_attractions #rabl
+    result = Attraction.fulltext_search(params[:q])
+    # result = Place.fulltext_search(params[:q])
+    # result = Event.fulltext_search(params[:q], at_the_future: true)
+
     respond_to do |format|
-      format.json { render json: zuller_result }
+      format.json { render json: result }
     end
   end
 
   def zuller_my_night
+    # user_token = params[:user_token]
     Attraction.all[0]
     bars = Bar.all
     parties = Party.all

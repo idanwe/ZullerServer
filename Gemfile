@@ -43,6 +43,7 @@ gem 'bson_ext'
 gem 'mongo_ext'
 gem 'enumerize'
 gem 'simple_enum'
+gem 'mongoid_fulltext'
 
 gem 'devise'
 gem 'cancan'

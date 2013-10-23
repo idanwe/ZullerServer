@@ -3,6 +3,7 @@ require 'music_enums'
 class Attraction
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::FullTextSearch
   extend Enumerize
 
   field :name, type: String
@@ -24,4 +25,6 @@ class Attraction
   # owner - embed <User>
 
   validates_presence_of :name
+
+  fulltext_search_in :name, filters: { at_the_future: lambda { |x| x.date.to_time > Time.now } }
 end

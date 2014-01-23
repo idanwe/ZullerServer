@@ -87,7 +87,7 @@ module ZS
       # end
 
       allow do
-        origins 'http://localhost:9000', 'http://127.0.0.1:9000'
+        origins 'http://localhost:9000', 'http://127.0.0.1:9000', 'http://zuller-oslo.herokuapp.com'
         resource '/api/*', :headers => :any, :methods => [:get, :post]
       end
     end
